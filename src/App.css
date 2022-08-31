@@ -1,5 +1,11 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Edu+TAS+Beginner:wght@700&display=swap');
+
+
 .App {
   text-align: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 .App-logo {
@@ -35,4 +41,187 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.modal{
+  position: fixed;
+  top: 50%;
+  left:50%;
+  transition: 200ms ease-in-out;
+  border:1px solid black;
+  border-radius: 15px;
+  z-index: 10;
+  background-color: white;
+  width: 420px;
+  max-width: 80%;
+}
+
+.modal-open{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-close{
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.modal.scale-zero{
+  transform: translate(-50%, -50%) scale(0);
+}
+.modal-active{
+  transform: translate(-50%, -50%) scale(1);
+}
+.modal-header{
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+.modal-header .title{
+  font-size: 1.9rem;
+  font-weight: bold;
+  margin-left: 24%;
+}
+.modal-header .close-button{
+cursor: pointer;
+font-size: 1.25rem;
+font-weight: bold;
+border-radius: 2cm;
+border-width: 0.05cm;
+background-color: #f1d0b8;
+}
+
+input{
+  border-radius: 2cm;
+  border-width: 0.05cm;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: 'Dancing Script', cursive;
+  background-color: #f1d0b8;
+}
+#overlay {
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+  .textarea {
+    background-color: #dddddd;
+    color: #000000;
+    padding: 1em;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    outline: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    margin-top: 10px;
+    width: 340px;
+    height: 370px;
+    transition: all 0.2s;
+    font-family: 'Edu TAS Beginner', cursive;
+    font-size: 25px;
+  }
+.title{
+  font-family: 'Dancing Script', cursive;
+}
+  
+:root {
+  --bg: #ffffff;
+  --color: rgb(94, 193, 255);
+  --font: Montserrat, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.wrapper {
+  padding: 1.5rem 0;
+  filter: url('#goo');
+}
+
+.button {
+  display: inline-block;
+  text-align: center;
+  background: var(--color);
+  color: var(--bg);
+  font-weight: bold;
+  padding: 1.18em 1.32em 1.03em;
+  line-height: 1;
+  border-radius: 1em;
+  position: relative;
+  min-width: 8.23em;
+  text-decoration: none;
+  font-family: var(--font);
+  font-size: 1.25rem;
+}
+
+.button:before,
+.button:after {
+  width: 4.4em;
+  height: 2.95em;
+  position: absolute;
+  content: "";
+  display: inline-block;
+  background: var(--color);
+  border-radius: 50%;
+  transition: transform 1s ease;
+  transform: scale(0);
+  z-index: -1;
+}
+
+.button:before {
+  top: -25%;
+  left: 20%;
+}
+
+.button:after {
+  bottom: -25%;
+  right: 20%;
+}
+
+.button:hover:before,
+.button:hover:after {
+  transform: none;
+}
+
+
+/* Demo styles */
+
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg)
+}
+.mainPage{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color: rgb(255, 255, 255);
+}
+.header{
+  font-family: 'Dancing Script', cursive;
+  font-size: 100px;
+  font-weight: bold;
+  
+  color: rgb(120, 218, 248);
+  text-shadow: 1px 0 1px #000, 
+0 2px 4px #000, 
+-4px 0 1px #000, 
+0 -1px 1px #000;
+}
+.head h1{
+ 
+  margin: 0%;
 }
